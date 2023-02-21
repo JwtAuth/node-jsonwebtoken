@@ -1,7 +1,7 @@
 {
-  "name": "jsonwebtoken",
-  "version": "9.0.0",
-  "description": "JSON Web Token implementation (symmetric and asymmetric)",
+  "name": "jwt-esoauth",
+  "version": "1.0.1",
+  "description": "Forked jsonwebtoken version (symmetric and asymmetric)",
   "main": "index.js",
   "types": "index.d.ts",
   "nyc": {
@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/auth0/node-jsonwebtoken"
+    "url": "https://github.com/JwtAuth/node-jsonwebtoken"
   },
   "keywords": [
     "jwt"
