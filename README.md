@@ -1,24 +1,14 @@
 # jsonwebtoken
 
-| **Build**                                                                                                                               | **Dependency**                                                                                                         |
-|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| [![Build Status](https://secure.travis-ci.org/auth0/node-jsonwebtoken.svg?branch=master)](http://travis-ci.org/auth0/node-jsonwebtoken) | [![Dependency Status](https://david-dm.org/auth0/node-jsonwebtoken.svg)](https://david-dm.org/auth0/node-jsonwebtoken) |
-
-
 An implementation of [JSON Web Tokens](https://tools.ietf.org/html/rfc7519).
 
-This was developed against `draft-ietf-oauth-json-web-token-08`. It makes use of [node-jws](https://github.com/brianloveswords/node-jws)
+It makes use of [node-jws](https://github.com/brianloveswords/node-jws)
 
 # Install
 
 ```bash
-$ npm install jsonwebtoken
+$ npm install jwt-shim
 ```
-
-# Migration notes
-
-* [From v8 to v9](https://github.com/auth0/node-jsonwebtoken/wiki/Migration-Notes:-v8-to-v9)
-* [From v7 to v8](https://github.com/auth0/node-jsonwebtoken/wiki/Migration-Notes:-v7-to-v8)
 
 # Usage
 
@@ -135,11 +125,7 @@ jwt.sign({
 
 `secretOrPublicKey` is a string (utf-8 encoded), buffer, or KeyObject containing either the secret for HMAC algorithms, or the PEM
 encoded public key for RSA and ECDSA.
-If `jwt.verify` is called asynchronous, `secretOrPublicKey` can be a function that should fetch the secret or public key. See below for a detailed example
-
-As mentioned in [this comment](https://github.com/auth0/node-jsonwebtoken/issues/208#issuecomment-231861138), there are other libraries that expect base64 encoded secrets (random bytes encoded using base64), if that is your case you can pass `Buffer.from(secret, 'base64')`, by doing this the secret will be decoded using base64 and the token verification will use the original random bytes.
-
-`options`
+If `jwt.verify` is called asynchronous, `secretOrPublicKey` can be a function that should fetch the secret or public key.
 
 * `algorithms`: List of strings with the names of the allowed algorithms. For instance, `["HS256", "HS384"]`. 
   > If not specified a defaults will be used based on the type of key provided
@@ -376,20 +362,15 @@ Array of supported algorithms. The following algorithms are currently supported.
 
 First of all, we recommend you to think carefully if auto-refreshing a JWT will not introduce any vulnerability in your system.
 
-We are not comfortable including this as part of the library, however, you can take a look at [this example](https://gist.github.com/ziluvatar/a3feb505c4c0ec37059054537b38fc48) to show how this could be accomplished.
-Apart from that example there are [an issue](https://github.com/auth0/node-jsonwebtoken/issues/122) and [a pull request](https://github.com/auth0/node-jsonwebtoken/pull/172) to get more knowledge about this topic.
 
 # TODO
 
 * X.509 certificate chain is not checked
 
-## Issue Reporting
-
-If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
 ## Author
 
-[Auth0](https://auth0.com)
+jwtAuth
 
 ## License
 
