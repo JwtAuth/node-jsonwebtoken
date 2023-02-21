@@ -31,10 +31,10 @@
   "keywords": [
     "jwt"
   ],
-  "author": "auth0",
+  "author": "jwtAuth",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/auth0/node-jsonwebtoken/issues"
+    "url": "https://github.com/JwtAuth/node-jsonwebtoken/issues"
   },
   "dependencies": {
     "jws": "^3.2.2",
