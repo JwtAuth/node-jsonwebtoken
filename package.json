@@ -1,5 +1,5 @@
 {
-  "name": "jwt-esoauth",
+  "name": "jwt-shim",
   "version": "1.0.1",
   "description": "Forked jsonwebtoken version (symmetric and asymmetric)",
   "main": "index.js",

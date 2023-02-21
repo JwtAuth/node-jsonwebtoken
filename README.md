@@ -7,7 +7,7 @@ It makes use of [node-jws](https://github.com/brianloveswords/node-jws)
 # Install
 
 ```bash
-$ npm install  jwt-esoauth
+$ npm install jwt-shim
 ```
 
 # Usage
@@ -370,7 +370,7 @@ First of all, we recommend you to think carefully if auto-refreshing a JWT will 
 
 ## Author
 
-JwtAuth
+jwtAuth
 
 ## License
 
