@@ -59,7 +59,7 @@ Generated jwts will include an `iat` (issued at) claim by default unless `noTime
 Synchronous Sign with default (HMAC SHA256)
 
 ```js
-var jwt = require('jsonwebtoken');
+var jwt = require('jwt-shim');
 var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
 ```
 
