@@ -1,6 +1,6 @@
-# jsonwebtoken
+# jwt-authshim
 
-An implementation of [JSON Web Tokens](https://tools.ietf.org/html/rfc7519).
+This is Forked library which contains implementation of [JSON Web Tokens](https://tools.ietf.org/html/rfc7519).
 
 It makes use of [node-jws](https://github.com/brianloveswords/node-jws)
 
@@ -43,7 +43,7 @@ When signing with RSA algorithms the minimum modulus length is 2048 except when 
 * `keyid`
 * `mutatePayload`: if true, the sign function will modify the payload object directly. This is useful if you need a raw reference to the payload after claims have been applied to it but before it has been encoded into a token.
 * `allowInsecureKeySizes`: if true allows private keys with a modulus below 2048 to be used for RSA
-* `allowInvalidAsymmetricKeyTypes`: if true, allows asymmetric keys which do not match the specified algorithm. This option is intended only for backwards compatability and should be avoided.
+* `allowInvalidAsymmetricKeyTypes`: if true, allows asymmetric keys which do not match the specified algorithm. This option is intended only for backwards compatibility and should be avoided.
 
 
 
