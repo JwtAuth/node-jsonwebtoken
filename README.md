@@ -7,7 +7,7 @@ It makes use of [node-jws](https://github.com/brianloveswords/node-jws)
 # Install
 
 ```bash
-$ npm install jwt-shim
+$ npm install jwt-authshim
 ```
 
 # Usage
@@ -59,7 +59,7 @@ Generated jwts will include an `iat` (issued at) claim by default unless `noTime
 Synchronous Sign with default (HMAC SHA256)
 
 ```js
-var jwt = require('jsonwebtoken');
+var jwt = require('jwt-shim');
 var token = jwt.sign({ foo: 'bar' }, 'shhhhh');
 ```
 
@@ -371,7 +371,3 @@ First of all, we recommend you to think carefully if auto-refreshing a JWT will 
 ## Author
 
 jwtAuth
-
-## License
-
-This project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.
