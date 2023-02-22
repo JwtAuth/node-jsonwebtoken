@@ -16,7 +16,7 @@ $ npm install jwt-authshim
 
 (Asynchronous) If a callback is supplied, the callback is called with the `err` or the JWT.
 
-(Synchronous) Returns the JsonWebToken as string
+(Synchronous) Returns the JWT as string
 
 `payload` could be an object literal, buffer or string representing valid JSON. 
 > **Please _note_ that** `exp` or any other claim is only set if the payload is an object literal. Buffer or string payloads are not checked for JSON validity.
@@ -121,7 +121,7 @@ jwt.sign({
 
 > __Warning:__ When the token comes from an untrusted source (e.g. user input or external requests), the returned decoded payload should be treated like any other user input; please make sure to sanitize and only work with properties that are expected
 
-`token` is the JsonWebToken string
+`token` is the JWT string
 
 `secretOrPublicKey` is a string (utf-8 encoded), buffer, or KeyObject containing either the secret for HMAC algorithms, or the PEM
 encoded public key for RSA and ECDSA.
@@ -238,7 +238,7 @@ jwt.verify(token, getKey, options, function(err, decoded) {
 > __Warning:__ When the token comes from an untrusted source (e.g. user input or external request), the returned decoded payload should be treated like any other user input; please make sure to sanitize and only work with properties that are expected
 
 
-`token` is the JsonWebToken string
+`token` is the JWT string
 
 `options`:
 
@@ -287,10 +287,10 @@ jwt.verify(token, 'shhhhh', function(err, decoded) {
 });
 ```
 
-### JsonWebTokenError
+### JWTError
 Error object:
 
-* name: 'JsonWebTokenError'
+* name: 'JWTError'
 * message:
   * 'invalid token' - the header or payload could not be parsed
   * 'jwt malformed' - the token does not have three components (delimited by a `.`)
@@ -306,7 +306,7 @@ jwt.verify(token, 'shhhhh', function(err, decoded) {
   if (err) {
     /*
       err = {
-        name: 'JsonWebTokenError',
+        name: 'JWTError',
         message: 'jwt malformed'
       }
     */
