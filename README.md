@@ -1,9 +1,7 @@
 # jwt-authshim
-
-This is Forked library which contains implementation of [JSON Web Tokens](https://tools.ietf.org/html/rfc7519).
-
-It makes use of [node-jws](https://github.com/brianloveswords/node-jws)
-
+jwt-authshim is a fork version from jsonwebtoken and the intention of this fork is to address the package increased size [Issue](https://github.com/auth0/node-jsonwebtoken/issues/878). 
+This is useful for the below scenario, 
+EdgeLambda attached to the cloudfront on viewer-request event has package size limit of 1 MB
 # Install
 
 ```bash
@@ -287,10 +285,10 @@ jwt.verify(token, 'shhhhh', function(err, decoded) {
 });
 ```
 
-### JWTError
+### JsonWebTokenError
 Error object:
 
-* name: 'JWTError'
+* name: 'JsonWebTokenError'
 * message:
   * 'invalid token' - the header or payload could not be parsed
   * 'jwt malformed' - the token does not have three components (delimited by a `.`)
@@ -306,7 +304,7 @@ jwt.verify(token, 'shhhhh', function(err, decoded) {
   if (err) {
     /*
       err = {
-        name: 'JWTError',
+        name: 'JsonWebTokenError',
         message: 'jwt malformed'
       }
     */
